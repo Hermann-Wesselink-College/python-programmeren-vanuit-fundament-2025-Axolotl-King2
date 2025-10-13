@@ -17,4 +17,4 @@ while saldo2 <1000000:
     else:
         saldo2 *= 1.04 - opname
         jaar2 += 1
-        print('dit kan ' + str(jaar2) + ' jaar')
+print('dit kan ' + str(jaar2) + ' jaar')
