@@ -2,8 +2,8 @@
 jaar = 0
 saldo = 100
 while saldo < 400:
-    jaar = jaar + 1
-    saldo = saldo * 1.1
+    jaar += 1
+    saldo *= 1.1
 print('jaar is: ' + str(jaar))
 print('saldo is: ' + str(saldo))
 
@@ -16,6 +16,6 @@ while saldo2 <1000000:
         print('Je kan dit bedrag je hele leven opnemen')
         break
     else:
-        saldo2 = saldo2 * 1.04 - opname
-        jaar2 = jaar2 + 1
+        saldo2 *= 1.04 - opname
+        jaar2 += 1
         print('dit kan ' + str(jaar2) + ' jaar')
