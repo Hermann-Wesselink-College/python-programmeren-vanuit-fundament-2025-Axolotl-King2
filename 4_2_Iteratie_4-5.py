@@ -4,8 +4,7 @@ saldo = 100
 while saldo < 400:
     jaar += 1
     saldo *= 1.1
-print('jaar is: ' + str(jaar))
-print('saldo is: ' + str(saldo))
+print('jaar is: ' + str(jaar), 'saldo is: ' + str(saldo))
 
 #opdracht 5
 jaar2 = 0
