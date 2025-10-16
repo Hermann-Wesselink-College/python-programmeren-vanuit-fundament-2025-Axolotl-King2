@@ -1,0 +1,26 @@
+from random import randint
+
+getalmin = input('welk getal is het laagste? ')
+getalmax = input('welk getal is het hoogste? ')
+computerGetal = randint((0+getalmin),(0+getalmax))
+gameover = False
+teller = 0
+
+while not gameover:
+     gebruikerGetal = int(input('Raad een getal tussen de '+ str(getalmin)+  ' en de '+ str(getalmax)))
+     if teller < 8:
+        if computerGetal < gebruikerGetal:
+            print("Het getal van de computer is kleiner!")
+            teller += 1
+        elif computerGetal > gebruikerGetal:
+            print("Het getal van de computer is groter!")
+            teller += 1
+        else:
+            print("Je hebt het geraden!")
+            gameover = True
+            teller += 1
+            print('Je hebt het in '+ str(teller) +' keer geraden.')
+            break
+     if teller == 8:
+        print('game over.')
+        break
