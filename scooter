@@ -1,0 +1,17 @@
+Snelheid = int(input('Hoe snel gaat de scooter? '))
+SpeedLimit = int(input('Wat is de speedlimit? '))
+overtreeding = Snelheid - SpeedLimit
+
+if overtreeding > 0:
+
+    if overtreeding < 10 :
+        print('Het persoon op de scooter krijgt een boete van €25. ')
+
+    elif overtreeding < 30 >= 10:
+        print('Het persoon op de scooter krijget een boete van €100. ')
+
+    else:
+        print('Het persoon op de scooter gaat naar de Halt. ')
+        
+elif overtreeding <=0:
+    print('geen boete')

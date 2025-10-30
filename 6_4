@@ -1,26 +1,30 @@
 from random import randint
 
-getalmin = input('welk getal is het laagste? ')
-getalmax = input('welk getal is het hoogste? ')
-computerGetal = randint((0+getalmin),(0+getalmax))
+getalmin = int(input('welk getal is het laagste? '))
+getalmax = int(input('welk getal is het hoogste? '))
+computerGetal = randint((1+getalmin-1),(1+getalmax-1))
 gameover = False
-teller = 0
+teller = int(input('hoe veel pogingen will je het in proberen? '))
+pogingen = teller
 
 while not gameover:
-     gebruikerGetal = int(input('Raad een getal tussen de '+ str(getalmin)+  ' en de '+ str(getalmax)))
-     if teller < 8:
+     gebruikerGetal = int(input('Raad een getal tussen de '+ str(getalmin)+  ' en de '+ str(getalmax)+' in '+str(teller)+' pogingen. '))
+     if pogingen > 0:
         if computerGetal < gebruikerGetal:
             print("Het getal van de computer is kleiner!")
-            teller += 1
+            pogingen -= 1
+            print('nog '+str(pogingen)+' pogingen over.')
         elif computerGetal > gebruikerGetal:
             print("Het getal van de computer is groter!")
-            teller += 1
+            pogingen -= 1
+            print('nog '+str(pogingen)+' pogingen over.')
         else:
             print("Je hebt het geraden!")
             gameover = True
-            teller += 1
-            print('Je hebt het in '+ str(teller) +' keer geraden.')
+            pogingen -= 1
+            print('Je hebt het in '+ str(teller-pogingen) +' keer geraden uit de '+str(teller)+' pogingen.')
             break
-     if teller == 8:
-        print('game over.')
+     if pogingen == 0:
+        print('Game over.')
+        print('Het getal was: '+str(computerGetal))
         break

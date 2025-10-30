@@ -1,0 +1,32 @@
+from random import randint
+
+mingetal = int(input('Welk getal moet de computer beginen met raden? '))
+maxgetal = int(input('Welk getal moet de computer eidingen met raden? '))
+teller = int(input('Hoe veel pogingen heeft de computer? '))
+pogingen = teller
+getal = int(input('welk getal denk je aan? '))
+guess = randint(1+mingetal-1, 1+maxgetal-1)
+
+while guess is not getal:
+    print('Computer denkt:'+str(guess))
+    vraag = input("Is het goed (g), hoger (h) of lager (l) ")
+    if vraag == "g":
+        print('The computer wins')
+        print('het getal was: '+ str(getal))
+        print('De computer heeft het in '+str(pogingen)+' geraden.')
+        guess = randint(1+mingetal-1, 1+maxgetal-1)
+        pogingen -= 1
+
+    elif vraag == "h":
+        print('De computer gaat nu hoger raden')
+        guess = randint(1+mingetal-1, 1+maxgetal-1)
+        pogingen -= 1
+
+    elif vraag == "l":
+        print('De computer gaat nu lager raden. ')
+        guess = randint(1+mingetal-1, 1+maxgetal-1)
+        pogingen -= 1
+
+    else:
+        print('ongeldige input try again. ')
+        # Ongeldige invoer
